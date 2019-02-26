@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gqlSlice arrays should be handled properly 1`] = `
+Object {
+  "field2": Array [
+    "field2",
+  ],
+}
+`;
+
+exports[`gqlSlice deep nested fields should be deeply resolved 1`] = `
+Object {
+  "field2": Object {
+    "deeperField": Object {
+      "deeperInner1": "deeperInner1",
+    },
+    "innerField2": "innerField2",
+  },
+}
+`;
+
+exports[`gqlSlice deep nested fields should be resolved 1`] = `
+Object {
+  "field2": Object {
+    "deeperField": Object {
+      "deeperInner1": "deeperInner1",
+      "deeperInner2": "deeperInner2",
+    },
+    "innerField1": "innerField1",
+    "innerField2": "innerField2",
+  },
+}
+`;
+
+exports[`gqlSlice deep nested fields should be resolved 2`] = `
+Object {
+  "field2": Array [
+    Object {
+      "innerField2": "innerField12",
+    },
+    Object {
+      "innerField2": "innerField22",
+    },
+    Object {
+      "innerField2": "innerField32",
+    },
+  ],
+}
+`;
+
+exports[`gqlSlice filters out field 1`] = `
+Object {
+  "field1": "field1",
+}
+`;
+
+exports[`gqlSlice ignore fields not specified 1`] = `
+Object {
+  "field1": "field1",
+}
+`;
