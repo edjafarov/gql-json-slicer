@@ -1,7 +1,7 @@
 # gql like JSON slicer
 
 Usage:
-```
+```javascript
 const gqlSlice = require('gql-json-slicer');
 
 
