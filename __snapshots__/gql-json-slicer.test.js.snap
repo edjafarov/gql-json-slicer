@@ -54,8 +54,88 @@ Object {
 }
 `;
 
+exports[`gqlSlice flatten should flatten the array 1`] = `
+Object {
+  "field1": Array [
+    Object {
+      "a": 1,
+      "b": 2,
+    },
+    Object {
+      "a": 3,
+      "b": 4,
+    },
+    Object {
+      "c": 3,
+    },
+    Object {
+      "c": 6,
+    },
+  ],
+}
+`;
+
+exports[`gqlSlice flatten should flatten the array with pick 1`] = `
+Object {
+  "field1": Array [
+    1,
+    3,
+    3,
+    6,
+  ],
+}
+`;
+
+exports[`gqlSlice flatten should flatten the object 1`] = `
+Object {
+  "field1": Object {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+  },
+}
+`;
+
 exports[`gqlSlice ignore fields not specified 1`] = `
 Object {
   "field1": "field1",
+}
+`;
+
+exports[`gqlSlice limit should limit the array 1`] = `
+Object {
+  "field1": Array [
+    1,
+    2,
+  ],
+}
+`;
+
+exports[`gqlSlice pick should pick the array to array 1`] = `
+Object {
+  "field1": Array [
+    1,
+    3,
+    5,
+  ],
+}
+`;
+
+exports[`gqlSlice pick should pick the array, to array of arrays 1`] = `
+Object {
+  "field1": Array [
+    Array [
+      1,
+      2,
+    ],
+    Array [
+      3,
+      4,
+    ],
+    Array [
+      5,
+      6,
+    ],
+  ],
 }
 `;
