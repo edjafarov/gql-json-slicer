@@ -111,6 +111,17 @@ Object {
 }
 `;
 
+exports[`gqlSlice native should work same way 1`] = `
+Object {
+  "field2": Object {
+    "deeperField": Object {
+      "deeperInner1": "deeperInner1",
+    },
+    "innerField2": "innerField2",
+  },
+}
+`;
+
 exports[`gqlSlice pick should pick the array to array 1`] = `
 Object {
   "field1": Array [

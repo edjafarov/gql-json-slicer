@@ -3,6 +3,9 @@ const gql = require('graphql-tag');
 module.exports = function gqlSlice(query, object){
   return objectSlicer(object, gql(query).definitions[0])
 }
+module.exports._ = (obj) =>{
+  return (query) => objectSlicer(obj, gql(query).definitions[0]);
+}
 
 function objectSlicer(obj, schema) {
   if (Array.isArray(obj)) {

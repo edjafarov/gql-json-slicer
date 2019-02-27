@@ -1,4 +1,5 @@
 const gqlSlice = require("./gql-json-slicer");
+const { _ } = gqlSlice;
 
 describe('gqlSlice', () => {
   var data1 = {
@@ -184,5 +185,29 @@ describe('gqlSlice flatten', () => {
         }
       }
     }`, data2)).toMatchSnapshot();
+  })
+})
+
+describe('gqlSlice native', () => {
+  var data1 = {
+    field1: "field1",
+    field2: {
+      innerField1: "innerField1",
+      innerField2: "innerField2",
+      deeperField: {
+        deeperInner1: "deeperInner1",
+        deeperInner2: "deeperInner2"
+      }
+    }
+  }
+  test('should work same way', () => {
+    expect(_(data1)`{
+      field2 {
+        innerField2
+        deeperField {
+          deeperInner1
+        }
+      }
+    }`).toMatchSnapshot();
   })
 })
